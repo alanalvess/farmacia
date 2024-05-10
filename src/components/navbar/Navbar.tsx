@@ -8,9 +8,9 @@ function Navbar() {
             <Link to='/home' className='text-2xl font-bold uppercase'>Farmácia Generation</Link>
   
             <div className='flex gap-4'>
-              <Link to='/temas' className='hover:underline'>Temas</Link>
+              <Link to='/categorias' className='hover:underline'>Categorias</Link>
               {/* <Link to='/postagens' className='hover:underline'>Postagens</Link> */}
-              <Link to='/cadastroTema' className='hover:underline'>Cadastrar tema</Link>
+              <Link to='/cadastroCategorias' className='hover:underline'>Cadastrar categoria</Link>
             </div>
           </div>
         </div>
