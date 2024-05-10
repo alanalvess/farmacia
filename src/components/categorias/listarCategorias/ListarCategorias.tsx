@@ -3,6 +3,7 @@ import { DNA } from 'react-loader-spinner';
 import { listar } from '../../../services/Services';
 import Categoria from '../../../models/Categoria';
 import CardCategoria from '../cardCategoria/CardCategoria';
+import { ToastAlerta } from '../../../utils/ToastAlerta';
 
 function ListarCategorias() {
 
@@ -13,7 +14,7 @@ function ListarCategorias() {
             await listar('/categorias', setCategorias)
         } catch (error: any) {
             if (error) {
-                alert('Categoria não encontrada')
+                ToastAlerta('Categoria não encontrada', 'erro')
             }
         }
     }
