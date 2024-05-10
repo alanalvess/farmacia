@@ -7,10 +7,16 @@ import ListarCategorias from './components/categorias/listarCategorias/ListarCat
 import FormCategoria from './components/categorias/formCategoria/FormCategoria'
 import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria'
 
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify'
+
+
 function App() {
 
   return (
     <>
+      <ToastContainer />
+
       <BrowserRouter>
         <Navbar />
         <div className='min-h-[80vh]'>

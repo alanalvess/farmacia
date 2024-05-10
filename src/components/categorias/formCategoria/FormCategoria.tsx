@@ -3,6 +3,7 @@ import { RotatingLines } from 'react-loader-spinner';
 import Categoria from '../../../models/Categoria';
 import { atualizar, cadastrar, listar } from '../../../services/Services';
 import { useNavigate, useParams } from 'react-router-dom';
+import { ToastAlerta } from '../../../utils/ToastAlerta';
 
 function FormCategoria() {
     const navigate = useNavigate();
@@ -25,21 +26,21 @@ function FormCategoria() {
             try {
                 await atualizar(`/categorias`, categoria, setCategoria)
 
-                alert('Categoria atualizada com sucesso')
+                ToastAlerta('Categoria atualizada com sucesso', 'sucesso')
                 retornar()
 
             } catch (error: any) {
-                alert('Erro ao atualizar a categoria')
+                ToastAlerta('Erro ao atualizar a categoria', 'erro')
             }
 
         } else {
             try {
                 await cadastrar(`/categorias`, categoria, setCategoria)
 
-                alert('Categoria cadastrada com sucesso')
+                ToastAlerta('Categoria cadastrada com sucesso', 'sucesso')
 
             } catch (error: any) {
-                alert('Erro ao cadastrar a categoria')
+                ToastAlerta('Erro ao cadastrar a categoria', 'erro')
             }
         }
 
@@ -84,7 +85,7 @@ function FormCategoria() {
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                     />
                 </div>
-                
+
                 <div className="flex flex-col gap-2">
                     <label htmlFor="descricao">Descrição da Categoria</label>
                     <input
