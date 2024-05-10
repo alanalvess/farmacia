@@ -6,10 +6,12 @@ import Footer from './components/footer/Footer'
 import ListarCategorias from './components/categorias/listarCategorias/ListarCategorias'
 import FormCategoria from './components/categorias/formCategoria/FormCategoria'
 import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria'
+import ListarProdutos from './components/produtos/listarProdutos/ListarProdutos'
+import FormProduto from './components/produtos/formProduto/FormProduto'
+import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto'
 
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify'
-
 
 function App() {
 
@@ -24,9 +26,13 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/categorias" element={<ListarCategorias />} />
-            <Route path="/cadastroCategorias" element={<FormCategoria />} />
+            <Route path="/cadastrarCategoria" element={<FormCategoria />} />
             <Route path="/editarCategoria/:id" element={<FormCategoria />} />
             <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+            <Route path="/produtos" element={<ListarProdutos />} />
+            <Route path="/cadastrarProduto" element={<FormProduto />} />
+            <Route path="/editarProduto/:id" element={<FormProduto />} />
+            <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
 
           </Routes>
         </div>
