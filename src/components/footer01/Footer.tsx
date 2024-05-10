@@ -21,6 +21,7 @@ function Footer() {
             <Link to='https://github.com/alanalvess' target='blank'>
               <GithubLogo size={48} />
             </Link>
+            
           </div>
         </div>
       </div>
